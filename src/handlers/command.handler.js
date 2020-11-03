@@ -68,7 +68,7 @@ module.exports = (client) => {
       let reply = `Nie podałeś żadnych argumentów, ${msg.author}!`
 
       if (cmd.usage) {
-        reply += `\nWłaściwe użycie byłoby następujące: \`${prefix}${cmd.name} ${cmd.usage}\``
+        reply += `\nWłaściwe użycie byłoby: \`${prefix}${cmd.name} ${cmd.usage}\``
       }
 
       return msg.channel.send(reply)
@@ -89,9 +89,9 @@ module.exports = (client) => {
       if (now < expirationTime) {
         const timeLeft = (expirationTime - now) / 1000
         return msg.reply(
-          `Proszę Czekać ${timeLeft.toFixed(
+          `Prosze czekać ${timeLeft.toFixed(
             1,
-          )} więcej sekund przed ponownym użyciem\`${cmdName}\` Komendy.`,
+          )} sekund przed ponownym użyciem tej \`${cmdName}\` komendy.`,
         )
       }
     }

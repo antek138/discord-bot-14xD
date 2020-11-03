@@ -9,7 +9,7 @@ module.exports = {
     const amountArg = parseInt(args[0])
 
     if (!Number.isInteger(amountArg)) {
-      return channel.send("Musisz określić liczbę wiadomości do usunięcia!")
+      return channel.send("Musisz wybrać ile wiadomości mam usunąć!")
     }
 
     if (amountArg < 2 || amountArg >= 100) {
